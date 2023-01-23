@@ -106,7 +106,87 @@
         <button class="button" type="submit">Сбросить</button>
       </form>
 
+      <select class="sorting" aria-label="Сортировка">
+        <option value="cheap">Сначала дешевые</option>
+        <option value="expensive">Сначала дорогие</option>
+        <option value="popular">По популярности</option>
+      </select>
 
+      <div class="sorting-view">
+        <a class="button button-dark" href="#">
+          <span class="visually-hidden">Показать карточки</span>
+        </a>
+        <a class="button button-light" href="#">
+          <span class="visually-hidden">Показать плитки</span>
+        </a> 
+        <a class="button button-light" href="#">
+          <span class="visually-hidden">Показать список</span>
+        </a>  
+      </div>
+
+      <div class="search-results">
+        <h2>Найдено гостиниц:<em>38</em></h2>
+      </div>
+      
+      <ul class="product-list">
+        <li class="product-card">
+            <h3 class="product-card-title">Amara Resort & Spa</h3>
+            <p class="type">Гостиница</p>
+            <span class="cost">От <em>4000 &#8381;</em></span>
+            <a class="button" href="#">Подробнее</a>
+            <button class="favorite">В избранное</button>
+            <p>Рейтинг:<em>8,5</em></p>
+        </li>    
+
+        <li class="product-card">
+          <h3 class="product-card-title">Villas at Poco Diablo</h3>
+          <p class="type">Гостиница</p>
+          <span class="cost">От <em>5000 &#8381;</em></span>
+          <a class="button" href="#">Подробнее</a>
+          <button class="favorite">В избранное</button>
+          <p>Рейтинг:<em>9,2</em></p>
+        </li>    
+      
+        <li class="product-card">
+          <h3 class="product-card-title">Desert Quail Inn</h3>
+          <p class="type">Гостиница</p>
+          <span class="cost">От <em>2500 &#8381;</em></span>
+          <a class="button" href="#">Подробнее</a>
+          <button class="favorite">В избранное</button>
+          <p>Рейтинг:<em>6,5</em></p>
+        </li>    
+      
+        <li class="product-card">
+          <h3 class="product-card-title">GreenTree Inn</h3>
+          <p class="type">Гостиница</p>
+          <span class="cost">От <em>1500 &#8381;</em></span>
+          <a class="button" href="#">Подробнее</a>
+          <button class="favorite">В избранное</button>
+          <p>Рейтинг:<em>5,0</em></p>
+        </li>
+      </ul>     
+
+      <ul class="pagination">
+        <li class="pagination-item">
+          <a class="pagination-link pagination-current disabled">1</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">2</a>
+        </li>
+        <li class="pagination-item" href="#">
+          <a class="pagination-link" href="#">3</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">4</a>
+        </li>
+        <li class="pagination-item">
+          <button class="slider-button" type="button">
+            <span class="visually-hidden">Страницы с 5 по 9</span>
+          </button>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">10</a>
+        </li>
+      </ul>
 
       <section class="catalog-subscription">
         <h2>Подпишитесь на рассылку</h2>
