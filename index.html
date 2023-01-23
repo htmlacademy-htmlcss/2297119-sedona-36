@@ -5,9 +5,9 @@
     <title>Седона</title>
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header" data-test="header">
       <nav class="navigation">
-        <a class="navigation-link" href="index.html"><img src="img/logo.svg" alt="Логотип Седоны"></a>
+        <a class="navigation-link" href="index.html"><img src="#" alt="Логотип Седоны"></a>
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
@@ -30,26 +30,25 @@
           </li>
           <li cLass="navigation-item">
             <a class="navigation-link" href="#">
-              <span class="visually hidden">
-                Уведомления
-              </span>
-            </a>
-          </li>
-          <li cLass="navigation-item">
-            <a class="navigation-link" href="#">
-              Хочу сюда
+              <span class="visually-hidden">Уведомления</span>12              
             </a>
           </li>
         </ul>
+
+        <div class="button">
+          <a class="navigation-link" href="#">
+            Хочу сюда!
+          </a>
+        </div>
       </nav>
     </header>
-    <main>
-      <section class="hero">
+    <main data-test="main">
+      <section class="hero" data-test="hero">
         <h1 class="visually-hidden">Седона</h1>
-        <img src="img/hero-background.jpg" alt="Фотография видов Седоны">
+        <img src="#" alt="Welcome to the gorgeous Sedona, beacause the Grand Canyon sucks!">
       </section>
 
-      <section class="advantages">
+      <section class="advantages" data-test="advantages">
         <h2 class="visually-hidden">Плюсы города</h2>
         <p><b>Седона — небольшой городок в Аризоне, заслуживающий большего!</b></p>
         <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -58,7 +57,7 @@
           <li class="advantages-list-item">
             <h3>Настоящий городок</h3>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="img/city-view.jpg" alt="Виды Седоны">
+            <img src="#" alt="Виды Седоны">
           </li>
 
           <li class="advantages-list-item">
@@ -79,7 +78,7 @@
           <li class="advantages-list-item">
             <h3>Там есть мост дьявола</h3>
             <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            <img src="img/bridge.jpg" alt="Мост Дьявола в Седоне">
+            <img src="#" alt="Мост Дьявола в Седоне">
           </li>
         </ul>
       </section>
@@ -107,46 +106,39 @@
         </ul>
       </section>
 
-      <section class="hotel-search">
+      <section class="search" data-test="search">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="hotel" href="catalog.html">Поиск гостиницы в Седоне</a>
-      </section>
-
-      <section class="main-subscription">
-        <h2>Подпишитесь на рассылку</h2>
-        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form action="https://echo.htmlacademy.ru/" method="post">
-          <input type="text" name="subscription" placeholder="Ваш e-mail">
-          <input type="submit" value="Подписаться">
-        </form>
-      </section>
+      </section>  
     </main>
-    <footer class="main-footer">
-      <section class="subscription">
-        <h2>Подпишитесь на рассылку</h2>
-        <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+    <footer class="main-footer" data-test="footer">
+      <section class="main-subscription">
+        <label for="subscribe">
+          <h2>Подпишитесь на рассылку</h2>
+          <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+        </label>
         <form action="https://echo.htmlacademy.ru/" method="post">
-          <input type="text" name="subscription" placeholder="Ваш e-mail">
-          <input type="submit" value="Подписаться">
+          <input type="text" name="subscription" placeholder="Ваш e-mail" id="subscribe">
+          <button type="submit">Подписаться</button>
         </form>
-      </section>
+      </section>  
       <h2 class="visually-hidden">Контакты</h2>
       <section class="social">
         <ul class="social-list">
           <li class="social-list-item">
             <a class="social-link" href="https://vk.com/htmlacademy">
-              <img src="img/vk.svg" alt="Vkontakte">
+              <img src="#" alt="Vkontakte">
             </a>
           </li>
           <li class="social-list-item">
             <a class="social-link" href="https://t.me/htmlacademy ">
-              <img src="img/telegram.svg" alt="Telegram">
+              <img src="#" alt="Telegram">
             </a>  
           </li>
           <li class="social-list-item">
             <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
-              <img src="img/youtube.svg" alt="Youtube">
+              <img src="#" alt="Youtube">
             </a>
           </li>
         </ul>
@@ -158,7 +150,7 @@
 
       <section class="logo">
         <a class="developer-logo" href="https://htmlacademy.ru/">
-          <img src="img/html_academy.svg" alt="Переход на сайт разработчика">
+          <img src="#" alt="Переход на сайт разработчика">
         </a>      
       </section>
     </footer>  
