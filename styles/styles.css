@@ -70,12 +70,9 @@ button[type="submit"] {
 
 .hero {
   background-color:#82B3D3;
-  background-image: url("../images/hero-background.jpg");
-    background-size: 100% auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-
+  background: url("../images/hero-flag.png") no-repeat center bottom,
+              url("../images/hero-background.jpg") no-repeat center center;
+  background-size: 100% auto;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
