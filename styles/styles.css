@@ -38,10 +38,7 @@ body {
 .page-container {
   margin: 0 auto;
   width: 1200px;
-}
-
-.main-container {
-  flex-grow: 1;
+  background-color: #FFFFFF;
 }
 
 .button {
@@ -65,10 +62,25 @@ button[type="submit"] {
 }
 
 .main-header {
-  background-color: #FFFFFF;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+}
+
+.navigation {
+  display: flex;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 450px;
+}
+
+.navigation-user {
+  max-width: 300px;
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -84,6 +96,14 @@ button[type="submit"] {
   background-color: #756157;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
+.main-page-container {
+  margin: 0 auto;
+}
+
 .hero {
   background-color:#82B3D3;
   background: url("../images/hero-flag.png") no-repeat center bottom,
@@ -94,6 +114,13 @@ button[type="submit"] {
   line-height: 36px;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.sedona {
+  display: block;
+  margin: 0 auto;
 }
 
 .advertisement {
@@ -102,14 +129,27 @@ button[type="submit"] {
   line-height: 36px;
   text-transform: uppercase;
   text-align: center;
-  background-color: #FFFFFF;
 }
 
 .advantages {
-  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
+.advantages-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+/*
+.city-view {
+  background-position: right;
+}
+*/
 .article {
   color: #333333;
   font-size: 22px;
@@ -117,6 +157,7 @@ button[type="submit"] {
 }
 
 .advantages-list-item {
+  width: 400px;
   color: #FFFFFF;
   background-color: #82B3D3;
 }
@@ -131,6 +172,20 @@ button[type="submit"] {
 .recomendations-list p {
   font-size: 18px;
   line-height: 21px;
+}
+
+.recomendations-list {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.recomendations-list-item {
+  width: 400px;
 }
 
 .square,
@@ -151,7 +206,6 @@ button[type="submit"] {
 
 .announcement,
 .search {
-  background-color: #FFFFFF;
   text-align: center;
 }
 
@@ -166,9 +220,6 @@ input ::placeholder {
   opacity: 60%;
 }
 
-.page-footer {
-  background-color: #FFFFFF;
-}
 
 .social-link,
 .developer-logo {
@@ -198,6 +249,16 @@ input ::placeholder {
 .main-subscription .note {
   font-size: 22px;
   line-height: 26px;
+}
+
+
+.contacts-container {
+  display: flex;
+  width: 1060px;
+  margin: 0px auto;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .footer-contact-phone {
@@ -260,7 +321,6 @@ line-height: 78px;
 }
 
 .search-results {
-  background-color: #FFFFFF;
 }
 
 .sorting {
@@ -342,6 +402,5 @@ line-height: 78px;
 
 .main-subscription.catalog {
   background-image: none;
-  background-color: #FFFFFF;
   color: #000000;
 }
