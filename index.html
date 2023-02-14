@@ -44,20 +44,22 @@
       </header>
 
       <main class="main-container" data-test="main">
-        <div class="main-page-container">
           <section class="hero" data-test="hero">
             <h1 class="visually-hidden">Сайт Седоны</h1>
-            <img src="images/main-title.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, beacause the Grand Canyon sucks!">
-            <h2 class="advertisement">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+            <img class="sedona-mountains" src="images/main-title.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, beacause the Grand Canyon sucks!">
           </section>
           <section class="advantages" data-test="advantages">
-            <h2 class="visually-hidden">Плюсы города</h2>
-            <p class="article">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+            <div>
+              <h2 class="advertisement">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+              <p class="article">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+            </div>
             <ul class="advantages-list">
-              <li class="advantages-list-item">
-                <img class="city-view" src="images/city-view.jpg" width="800" height="384" alt="Виды Седоны">
+              <li class="advantages-list-item city-view">
+                <div>
                     <h3>Настоящий городок</h3>
                     <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+                </div>
+                <img src="images/city-view.jpg" width="800" height="384" alt="Виды Седоны">
               </li>
               <li class="advantages-list-item square">
                   <h3>Небольшая площадь</h3>
@@ -71,9 +73,11 @@
                   <h3>Мало туристов</h3>
                   <p>Большинство едет в Гранд Каньон и толпится там</p>
               </li>
-              <li class="advantages-list-item">
+              <li class="advantages-list-item devil-bridge">
+                <div>
                   <h3>Там есть мост дьявола</h3>
                   <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+                </div>
                   <img class="bridge" src="images/bridge.jpg" width="800" height="385" alt="Мост Дьявола в Седоне">
               </li>
             </ul>
@@ -105,7 +109,6 @@
             <p class="article">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
             <button class="button" type="button">Поиск гостиницы в Седоне</button>
           </section>
-        </div>
       </main>
 
       <footer class="page-footer" data-test="footer">
