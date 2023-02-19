@@ -16,9 +16,16 @@
     font-display: swap;
 }
 
-body {
-    font-family: "PT Sans", sans-serif;
+html {
+  height: 100%;
+}
 
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: "PT Sans", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -26,6 +33,12 @@ body {
 
     color: #000000;
     background: #F2F2F2;
+}
+
+.page-container {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: #FFFFFF;
 }
 
 .button {
@@ -49,10 +62,34 @@ button[type="submit"] {
 }
 
 .main-header {
-  background-color: #FFFFFF;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  padding-left: 0px 70px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0 auto;
+  width: 1060px;
+}
+
+.sedona {
+  padding: 0;
+  margin-right: 30px;
+}
+
+.navigation-list {
+  margin: 0 auto;
+  padding: 0;
+  width: 450px;
+}
+
+.navigation-user {
+  width: 300px;
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -68,33 +105,68 @@ button[type="submit"] {
   background-color: #756157;
 }
 
+.main-container {
+  flex-grow: 1;
+  margin: 0 auto;
+  padding: 0;
+}
+
 .hero {
   background-color:#82B3D3;
-  background-image: url("../images/hero-background.jpg");
-    background-size: 100% auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-
+  background: url("../images/hero-flag.png") no-repeat center bottom,
+              url("../images/hero-background.jpg") no-repeat center;
+  background-size: 100% auto;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
   text-align: center;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .advertisement {
+  display: block;
+
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
   text-align: center;
-  background-color: #FFFFFF;
 }
 
 .advantages {
-  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
   text-align: center;
+}
+
+.advantages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.city-view {
+  width: 100%;
+  display: flex;
+}
+
+.devil-bridge {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.square,
+.road,
+.tourists {
+  width: 400px;
 }
 
 .article {
@@ -103,6 +175,10 @@ button[type="submit"] {
   line-height: 26px;
 }
 
+.advantages-list-item {
+  color: #FFFFFF;
+  background-color: #82B3D3;
+}
 
 .advantages-list-item h3,
 .recomendations-list-item h3 {
@@ -116,19 +192,26 @@ button[type="submit"] {
   line-height: 21px;
 }
 
-.advantages-list li:first-child,
-.advantages-list li:last-child {
-  color: #FFFFFF;
-  background-color: #82B3D3;
+.recomendations-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
 }
 
-.advantages-list li:nth-child(2),
-.advantages-list li:nth-child(4) {
+.recomendations-list-item {
+  width: 400px;
+}
+
+.square,
+.tourists {
   background-color: rgba(131, 179, 211, 0.12);
   color: #333333;
 }
 
-.advantages-list li:nth-child(3) {
+.road {
   background-color: rgba(131, 179, 211, 0.2);
   color: #333333;
 }
@@ -140,27 +223,18 @@ button[type="submit"] {
 
 .announcement,
 .search {
-  background-color: #FFFFFF;
   text-align: center;
 }
 
-.recomendations-list li:first-child,
-.recomendations-list li:last-child {
-  background: rgba(131, 179, 211, 0.2);
-}
-
-.recomendations-list li:nth-child(2) {
-  background-color: #FFFFFF;
+.house,
+.souvenier {
+  background: rgba(131, 179, 211, 0.12);
 }
 
 input ::placeholder {
   font-size: 18px;
   line-height: 24px;
   opacity: 60%;
-}
-
-.page-footer {
-  background-color: #FFFFFF;
 }
 
 .social-link,
@@ -193,6 +267,15 @@ input ::placeholder {
   line-height: 26px;
 }
 
+
+.contacts-container {
+  width: 1060px;
+  padding: 0px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .footer-contact-phone {
   color: #000000;
   text-decoration: none;
@@ -211,6 +294,10 @@ input ::placeholder {
   color: #FFFFFF;
 }
 
+.content {
+  margin: 35px 70px 70px 70px;
+}
+
 .catalog-title {
 font-weight: 700;
 font-size: 60px;
@@ -222,6 +309,40 @@ line-height: 78px;
   font-size: 16px;
   line-height: 21px;
   text-decoration: none;
+}
+
+.general-filters-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.filters-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.infrastructure,
+.house-filter {
+  width: 150.43px;
+}
+
+.costs {
+  width: 549px;
+}
+
+.costs-filter {
+  width: 288px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .catalog-filter-title {
@@ -243,6 +364,13 @@ line-height: 78px;
   line-height: 24px;
 }
 
+.filter-buttons {
+  width: 191px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
 .button.apply {
   background-color: #82B3D3;
 }
@@ -252,8 +380,17 @@ line-height: 78px;
   background: transparent;
 }
 
-.search-results {
-  background-color: #FFFFFF;
+.catalog-header-container {
+  width: 1060px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.sorting-container {
+  display: flex;
+  width: 522px;
+  justify-content: space-between;
 }
 
 .sorting {
@@ -263,6 +400,37 @@ line-height: 78px;
 
 .sorting-view-button button {
   background-color:#FFFFFF;
+}
+
+.product-card-container {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.product-card {
+  width: 340;
+  border: #E6E6E6 solid 1px;
+}
+
+.product-list {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ margin: 0 auto;
+}
+
+.pagination {
+  list-style: none;
+  width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: row;
+  justify-content: flex-start;
+}
+
+.pagination-item {
+  width: 60px;
+  margin-right: 8px;
 }
 
 .product-card-title {
@@ -335,8 +503,6 @@ line-height: 78px;
 
 .main-subscription.catalog {
   background-image: none;
-  background-color: #FFFFFF;
+  background-color: inherit;
   color: #000000;
 }
-
-/*get*/
