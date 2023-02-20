@@ -9,38 +9,41 @@
     <div class="page-container">
       <header class="main-header" data-test="header">
         <nav class="navigation">
-          <a class="navigation-link header-logo" href="index.html">
-            <img src="images/logo.svg" width="140" height="70.05" alt="Логотип Седоны">
-          </a>
-          <ul class="navigation-list">
-            <li class="navigation-item">
-              <a class="navigation-link" href="index.html">Главная</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">О Седоне</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link navigation-link-active">Гостиницы</a>
-            </li>
-          </ul>
-
-          <ul class="navigation-list navigation-user">
-            <li cLass="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="visually-hidden">Поиск</span>
-              </a>
-            </li>
-            <li cLass="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="visually-hidden">Избранное</span>12
-              </a>
-            </li>
-            <li cLass="navigation-item">
-              <a class="navigation-link button" href="#">
-                <span class="visually-hidden">Хочу сюда!</span>
-              </a>
+          <div class="pages-navigation">
+            <a class="navigation-link header-logo">
+              <img class="sedona-logo" src="images/logo.svg" width="140" height="70.05" alt="Логотип Седоны">
+            </a>
+            <ul class="navigation-list">
+              <li class="navigation-item">
+                <a class="navigation-link navigation-link-active">Главная</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="#">О Седоне</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link navigation-link-active" href="catalog.html">Гостиницы</a>
+              </li>
             </ul>
-        </nav>
+          </div>
+
+          <div class="site-navigation">
+            <ul class="navigation-list navigation-user">
+              <li cLass="navigation-item">
+                <a class="navigation-link" href="#">
+                  <span class="visually-hidden">Поиск</span>
+                </a>
+              </li>
+              <li cLass="navigation-item">
+                <a class="navigation-link" href="#">
+                  <span class="visually-hidden">Избранное</span>12
+                </a>
+              </li>
+              <li cLass="navigation-item">
+                <a class="navigation-link button" href="#">
+                  Хочу сюда!
+                </a>
+              </ul>
+            </div>
       </header>
       <main class="main-container" data-test="main">
         <div class="main-head">

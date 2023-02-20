@@ -35,6 +35,16 @@ body {
     background: #F2F2F2;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .page-container {
   margin: 0 auto;
   width: 1200px;
@@ -51,21 +61,25 @@ body {
   font-style: normal;
   text-transform: uppercase;
   text-align: center;
+  border: 0px;
 }
 
 button[type="button"] {
   background-color: #756157;
+  border: 0px;
 }
 
 button[type="submit"] {
   background-color:#82B3D3;
+  border: 0px;
 }
 
 .main-header {
+  margin: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  padding-left: 0px 70px;
+  padding: 0px 70px;
 }
 
 .navigation {
@@ -76,33 +90,72 @@ button[type="submit"] {
   width: 1060px;
 }
 
-.sedona {
-  padding: 0;
-  margin-right: 30px;
-}
-
-.navigation-list {
-  margin: 0 auto;
-  padding: 0;
-  width: 450px;
-}
-
-.navigation-user {
-  width: 300px;
-  margin-left: auto;
-}
-
 .navigation-link {
+  display: block;
+  padding: 20px 16px;
   color: #000000;
   text-decoration: none;
   text-align: center;
 }
 
+.pages-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-link.header-logo {
+  display: block;
+  padding: 0;
+  margin-right: 30px;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 450px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation-list.navigation-user {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 176px;
+  padding: 0;
+  margin: 0;
+}
+
+.icons {
+  min-width: 44px;
+  min-height: 64px;
+  padding: 0;
+  margin: 0;
+}
+
+.site-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  padding: 0;
+  margin: 0;
+}
+
 .navigation-link.button {
+  display: block;
+  margin: 0;
   color: #FFFFFF;
   font-size: 16px;
   line-height: 20px;
   background-color: #756157;
+  padding: 8px 34px;
+  list-style-type: none;
+  border: 0;
 }
 
 .main-container {
@@ -116,24 +169,50 @@ button[type="submit"] {
   background: url("../images/hero-flag.png") no-repeat center bottom,
               url("../images/hero-background.jpg") no-repeat center;
   background-size: 100% auto;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
+  border: 0;
 }
 
-.advertisement {
+.sedona-text {
   display: block;
+  padding: 51px 371px 82px;
+}
 
+.preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 69px 0px;
+  margin: 0 auto;
+  text-align: center;
+}
+.advertisement {
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
   text-align: center;
+  display: block;
 }
+
+.main-advertisement {
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  width: 620px;
+}
+
+.article {
+  color: #333333;
+  font-size: 22px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  width: 651px;
+  display: block;
+}
+
 
 .advantages {
   margin: 0;
@@ -146,33 +225,60 @@ button[type="submit"] {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   align-content: stretch;
 }
 
+.advantages-list-item {
+  display: block;
+  padding: 101.5px 85px;
+  width: 230px;
+}
+
+.advantages-list-item h3 {
+  margin: 0px 27.5px 62px;
+  padding: 0;
+  width: 175px;
+}
+
+.sedona-view {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-list-item p {
+  margin: 0;
+  padding: 0;
+}
+
 .city-view {
-  width: 100%;
   display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+}
+
+.complex-block {
+  padding: 101.5px 85px;
+  width: 230px;
+}
+
+.bridge {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .devil-bridge {
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
-}
-
-.square,
-.road,
-.tourists {
-  width: 400px;
-}
-
-.article {
-  color: #333333;
-  font-size: 22px;
-  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
 }
 
 .advantages-list-item {
@@ -194,15 +300,21 @@ button[type="submit"] {
 
 .recomendations-list {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
+  list-style-type: none;
+  text-align: center;
 }
 
 .recomendations-list-item {
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 230px;
+  padding: 81px 85px;
+  margin: 0 auto;
 }
 
 .square,
@@ -216,19 +328,63 @@ button[type="submit"] {
   color: #333333;
 }
 
-.recomendations {
-  background-color: #FFFFFF;
-  text-align: center;
-}
-
 .announcement,
 .search {
   text-align: center;
 }
 
+ .recomendations .announcement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 0px;
+  margin: 0;
+ }
+
+ .invitation-advertisement {
+  width: 505px;
+  margin-bottom: 20px;
+ }
+
+
 .house,
 .souvenier {
   background: rgba(131, 179, 211, 0.12);
+}
+
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  width: 592px;
+  padding: 96px 304px;
+  margin: 0;
+}
+
+.hotels {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 54px;
+}
+
+.hotels-advertisement {
+  margin: 0px 0px 20px;
+  padding: 0;
+}
+
+.hotels-article {
+  width: 592px;
+}
+
+.hotels.button {
+  display: block;
+  padding: 8px 50px;
+  margin: 0;
+  border: 0;
 }
 
 input ::placeholder {
@@ -252,7 +408,25 @@ input ::placeholder {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
+}
 
+.subscription-container {
+  display: flex;
+  width: 684px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 96px 268px 104px;
+  margin: 0;
+}
+
+.subscription-preview {
+  width: 475px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
 }
 
 .main-subscription .action {
@@ -260,13 +434,16 @@ input ::placeholder {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
 .main-subscription .note {
   font-size: 22px;
   line-height: 26px;
+  margin: 0;
+  padding: 0;
 }
-
 
 .contacts-container {
   width: 1060px;
