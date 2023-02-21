@@ -61,32 +61,30 @@ body {
   font-style: normal;
   text-transform: uppercase;
   text-align: center;
-  border: 0px;
+  border: 0;
 }
 
 button[type="button"] {
   background-color: #756157;
-  border: 0px;
+  border: 0;
 }
 
 button[type="submit"] {
   background-color:#82B3D3;
-  border: 0px;
+  border: 0;
 }
 
 .main-header {
-  margin: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  padding: 0px 70px;
 }
 
 .navigation {
   display: flex;
   justify-content: space-between;
-  padding: 0;
-  margin: 0 auto;
+  padding: 0 70px;
+  margin: 0;
   width: 1060px;
 }
 
@@ -112,12 +110,13 @@ button[type="submit"] {
 }
 
 .navigation-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   width: 450px;
   list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .navigation-list.navigation-user {
@@ -183,7 +182,7 @@ button[type="submit"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 69px 0px;
+  padding: 69px 0;
   margin: 0 auto;
   text-align: center;
 }
@@ -198,7 +197,7 @@ button[type="submit"] {
 
 .main-advertisement {
   padding: 0;
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 25px;
   width: 620px;
 }
@@ -237,18 +236,18 @@ button[type="submit"] {
 }
 
 .advantages-list-item h3 {
-  margin: 0px 27.5px 62px;
+  margin: 0 27.5px 62px;
   padding: 0;
   width: 175px;
 }
 
-.sedona-view {
-  display: block;
+.advantages-list-item p {
   margin: 0;
   padding: 0;
 }
 
-.advantages-list-item p {
+.sedona-view {
+  display: block;
   margin: 0;
   padding: 0;
 }
@@ -337,7 +336,7 @@ button[type="submit"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 64px 0px;
+  padding: 64px 0;
   margin: 0;
  }
 
@@ -372,7 +371,7 @@ button[type="submit"] {
 }
 
 .hotels-advertisement {
-  margin: 0px 0px 20px;
+  margin: 0 0 20px;
   padding: 0;
 }
 
@@ -408,16 +407,12 @@ input ::placeholder {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
-}
-
-.subscription-container {
   display: flex;
-  width: 684px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 96px 268px 104px;
-  margin: 0;
+  padding: 96px 258px 104px;
+  width: 684px;
 }
 
 .subscription-preview {
@@ -426,7 +421,8 @@ input ::placeholder {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 0;
+  padding: 0;
+  margin-bottom: 54px;
 }
 
 .main-subscription .action {
@@ -434,7 +430,8 @@ input ::placeholder {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
   padding: 0;
 }
 
@@ -446,11 +443,26 @@ input ::placeholder {
 }
 
 .contacts-container {
-  width: 1060px;
-  padding: 0px 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 1060px;
+  padding: 0;
+  margin: 40px 70px;
+}
+
+.social-list-item {
+  min-width: 47.33px;
+  min-height: 40px;
+}
+
+.social-list {
+  list-style-type: none;
+  display: flex;
+  width: 200px;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-contact-phone {
@@ -459,6 +471,15 @@ input ::placeholder {
   font-size: 40px;
   line-height: 40px;
   text-align: center;
+}
+
+.developer-logo {
+  display: block;
+  min-width: 115px;
+  min-height: 33px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .main-head {
@@ -601,7 +622,6 @@ line-height: 78px;
   width: 1060px;
   margin: 0 auto;
   display: flex;
-  justify-content: row;
   justify-content: flex-start;
 }
 
