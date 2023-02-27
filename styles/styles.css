@@ -130,6 +130,7 @@ button[type="submit"] {
 }
 
 .icons {
+  display: block;
   min-width: 44px;
   min-height: 64px;
   padding: 0;
@@ -144,6 +145,7 @@ button[type="submit"] {
   padding: 0;
   margin: 0;
 }
+
 
 .navigation-link.button {
   display: block;
@@ -176,6 +178,7 @@ button[type="submit"] {
 .sedona-text {
   display: block;
   padding: 51px 371px 82px;
+  margin: 0;
 }
 
 .preview {
@@ -287,6 +290,8 @@ button[type="submit"] {
 
 .advantages-list-item h3,
 .recomendations-list-item h3 {
+  font-size: 24px;
+  line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
 }
