@@ -397,13 +397,6 @@ input ::placeholder {
   line-height: 24px;
   opacity: 60%;
 }
-
-.social-link,
-.developer-logo {
-  color: #000000;
-  text-decoration: none;
-}
-
 .main-subscription {
   color: #FFFFFF;
   text-align: center;
@@ -448,6 +441,25 @@ input ::placeholder {
   padding: 0;
 }
 
+.subscription-form {
+  display: flex;
+  width: 684px;
+  justify-content: stretch;
+}
+
+input[type="text"] {
+  width: 452px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.subscription.button {
+  padding: 8px 50px;
+}
+
+
+
 .contacts-container {
   display: flex;
   justify-content: space-between;
@@ -477,6 +489,12 @@ input ::placeholder {
   font-size: 40px;
   line-height: 40px;
   text-align: center;
+}
+
+.social-link,
+.developer-logo {
+  color: #000000;
+  text-decoration: none;
 }
 
 .developer-logo {
