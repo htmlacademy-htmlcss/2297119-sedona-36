@@ -89,8 +89,7 @@ button[type="submit"] {
 }
 
 .navigation-link {
-  display: block;
-  padding: 20px 16px;
+  padding: 0px 16px;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -103,16 +102,18 @@ button[type="submit"] {
   margin: 0;
 }
 
-.navigation-link.header-logo {
+.navigation-link.header-logo img {
   display: block;
   padding: 0;
   margin-right: 30px;
+  margin-bottom: -6px;
+  position: relative;
 }
 
 .navigation-list {
   display: flex;
-  justify-content: flex-start;
   flex-wrap: wrap;
+  align-items: center;
   margin: 0;
   padding: 0;
   width: 450px;
@@ -130,6 +131,7 @@ button[type="submit"] {
 }
 
 .icons {
+  display: block;
   min-width: 44px;
   min-height: 64px;
   padding: 0;
@@ -144,6 +146,7 @@ button[type="submit"] {
   padding: 0;
   margin: 0;
 }
+
 
 .navigation-link.button {
   display: block;
@@ -176,6 +179,7 @@ button[type="submit"] {
 .sedona-text {
   display: block;
   padding: 51px 371px 82px;
+  margin: 0;
 }
 
 .preview {
@@ -287,6 +291,8 @@ button[type="submit"] {
 
 .advantages-list-item h3,
 .recomendations-list-item h3 {
+  font-size: 24px;
+  line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -391,13 +397,6 @@ input ::placeholder {
   line-height: 24px;
   opacity: 60%;
 }
-
-.social-link,
-.developer-logo {
-  color: #000000;
-  text-decoration: none;
-}
-
 .main-subscription {
   color: #FFFFFF;
   text-align: center;
@@ -442,6 +441,25 @@ input ::placeholder {
   padding: 0;
 }
 
+.subscription-form {
+  display: flex;
+  width: 684px;
+  justify-content: stretch;
+}
+
+input[type="text"] {
+  width: 452px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.subscription.button {
+  padding: 8px 50px;
+}
+
+
+
 .contacts-container {
   display: flex;
   justify-content: space-between;
@@ -471,6 +489,12 @@ input ::placeholder {
   font-size: 40px;
   line-height: 40px;
   text-align: center;
+}
+
+.social-link,
+.developer-logo {
+  color: #000000;
+  text-decoration: none;
 }
 
 .developer-logo {
@@ -633,22 +657,34 @@ margin: 0;
 }
 
 .product-card {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 16px 20px;
+  padding: 20px;
   width: 340;
   border: #E6E6E6 solid 1px;
   list-style-type: none;
-  padding: 0;
-  margin-bottom: 20px;
 }
 
 .product-list {
- display: flex;
- justify-content: space-between;
- flex-wrap: wrap;
- margin: 0 70px 40px;
+ display: grid;
+ grid-template-columns: 340px 340px 340px;
+ grid-template-rows: auto auto;
+ gap: 20px 20px;
+ margin: 0 70px 80px;
  padding: 0;
 }
 
+.hotel {
+  display: block;
+  grid-column: 1 / -1;
+}
+
 .product-card-title {
+  grid-column: 1 / -1;
+  padding: 0;
+  margin: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -656,6 +692,8 @@ margin: 0;
 }
 
 .type {
+  padding: 0;
+  margin: 0;
   color:#333333;
   font-size: 18px;
   line-height: 21px;
@@ -670,11 +708,16 @@ margin: 0;
 }
 
 .favorite {
+  display: block;
+  padding: 8px 0;
+  margin: 0;
   color:#FFFFFF;
-  font-weight: inherit;
+  font-weight: 700;
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   background-color: #82B3D3;
+  text-transform: uppercase;
 }
 
 .favorite.added {
@@ -682,15 +725,24 @@ margin: 0;
 }
 
 .product-card .more {
+  display: block;
+  padding: 8px 0;
+  margin: 0;
+  font-weight: 700;
+  font-family: inherit;
   color:#FFFFFF;
   text-decoration: none;
-  font-weight: inherit;
   font-size: 16px;
   line-height: 20px;
   background-color: #756157;
 }
 
 .rating {
+  text-transform: uppercase;
+  display: block;
+  padding: 8px 0;
+  margin: 0;
+  text-align: center;
   color:#333333;
   font-size: 16px;
   line-height: 20px;
@@ -699,7 +751,7 @@ margin: 0;
 
 .pagination {
   list-style: none;
-  margin: 40px 70px 60px;
+  margin: 0 70px 60px;
   padding: 0;
   display: flex;
   justify-content: flex-start;
