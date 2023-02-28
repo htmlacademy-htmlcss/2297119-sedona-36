@@ -9,39 +9,46 @@
     <div class="page-container">
       <header class="main-header" data-test="header">
         <nav class="navigation">
-          <a class="navigation-link header-logo" href="index.html">
-            <img src="images/logo.svg" width="140" height="70.05" alt="Логотип Седоны">
-          </a>
-          <ul class="navigation-list">
-            <li class="navigation-item">
-              <a class="navigation-link" href="index.html">Главная</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">О Седоне</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link navigation-link-active">Гостиницы</a>
-            </li>
-          </ul>
-
-          <ul class="navigation-list navigation-user">
-            <li cLass="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="visually-hidden">Поиск</span>
-              </a>
-            </li>
-            <li cLass="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="visually-hidden">Избранное</span>12
-              </a>
-            </li>
-            <li cLass="navigation-item">
-              <a class="navigation-link button" href="#">
-                <span class="visually-hidden">Хочу сюда!</span>
-              </a>
+          <div class="pages-navigation">
+            <a class="navigation-link header-logo" href="index.html">
+              <img class="sedona-logo" src="images/logo.svg" width="140" height="70.05" alt="Логотип Седоны">
+            </a>
+            <ul class="navigation-list">
+              <li class="navigation-item">
+                <a class="navigation-link" href="index.html">Главная</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="#">О Седоне</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link navigation-link-active" href="catalog.html">Гостиницы</a>
+              </li>
             </ul>
+          </div>
+
+          <div class="site-navigation">
+              <ul class="navigation-list navigation-user">
+                <li cLass="navigation-item">
+                  <a class="icons" href="#">
+                    <span class="visually-hidden">Поиск</span>
+                  </a>
+                </li>
+                <li cLass="navigation-item">
+                  <a class="icons" href="#">
+                    <span class="visually-hidden">Избранное</span>12
+                  </a>
+                </li>
+              </ul>
+
+            <div class="link-button">
+                <a class="navigation-link button" href="#">
+                  Хочу сюда!
+                </a>
+            </div>
+          </div>
         </nav>
       </header>
+
       <main class="main-container" data-test="main">
         <div class="main-head">
           <div class="content">
@@ -145,26 +152,25 @@
                   <option value="expensive">Сначала дорогие</option>
                   <option value="popular">По популярности</option>
                 </select>
-                <div class="sorting-view">
-                  <ul class="sorting-view-list">
-                    <li class="sorting-view-button">
-                      <button class="view-button button-dark" type="button">
-                        <span class="visually-hidden">Показать карточки</span>
-                    </li>
-                    <li class="sorting-view-button">
-                      <button class="view-button button-light" type="button">
-                        <span class="visually-hidden">Показать плитки</span>
-                      </button>
-                    </li>
-                    <li class="sorting-view-button">
-                      <button class="view-button button-light" type="button">
-                        <span class="visually-hidden">Показать список</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
+                <ul class="sorting-view-list">
+                  <li class="sorting-view-button">
+                    <button class="view-button button-dark" type="button">
+                      <span class="visually-hidden">Показать карточки</span>
+                  </li>
+                  <li class="sorting-view-button">
+                    <button class="view-button button-light" type="button">
+                      <span class="visually-hidden">Показать плитки</span>
+                    </button>
+                  </li>
+                  <li class="sorting-view-button">
+                    <button class="view-button button-light" type="button">
+                      <span class="visually-hidden">Показать список</span>
+                    </button>
+                  </li>
+                </ul>
               </div>
             </div>
+
             <div class="product-card-container">
               <ul class="product-list" data-test="catalog">
                 <li class="product-card">
@@ -175,7 +181,7 @@
                   <a class="more button" href="#">Подробнее</a>
                   <button class="favorite" type="submit">В избранное</button>
                   <div class="stars">
-                    <span class="visually hidden">4 звезды</span>
+                    <span class="visually-hidden">4 звезды</span>
                   </div>
                   <p class="rating">Рейтинг:<span> 8,5</span></p>
                 </li>
@@ -188,7 +194,7 @@
                   <a class="more button" href="#">Подробнее</a>
                   <button class="favorite added" type="submit">В избранном</button>
                   <div class="stars">
-                    <span class="visually hidden">4 звезды</span>
+                    <span class="visually-hidden">4 звезды</span>
                   </div>
                   <p class="rating">Рейтинг:<span> 9,2</span></p>
                 </li>
@@ -201,7 +207,7 @@
                   <a class="more button" href="#">Подробнее</a>
                   <button class="favorite" type="submit">В избранное</button>
                   <div class="stars">
-                    <span class="visually hidden">3 звезды</span>
+                    <span class="visually-hidden">3 звезды</span>
                   </div>
                   <p class="rating">Рейтинг:<span> 6,5</span></p>
                 </li>
@@ -214,7 +220,7 @@
                   <a class="more button" href="#">Подробнее</a>
                   <button class="favorite" type="submit">В избранное</button>
                   <div class="stars">
-                    <span class="visually hidden">2 звезды</span>
+                    <span class="visually-hidden">2 звезды</span>
                   </div>
                   <p class="rating">Рейтинг:<span> 5,0</span></p>
                 </li>
@@ -250,15 +256,17 @@
         <footer class="page-footer" data-test="footer">
           <div class="page-footer-container">
             <section class="main-subscription catalog" data-test="subscribe">
-              <label for="subscribe">
-                <h2 class="action">Подпишитесь на рассылку</h2>
-                <p class="note">Только полезная информация и никакого спама, честное бойскаутское!</p>
-              </label>
-              <form action="https://echo.htmlacademy.ru/" method="post">
+              <div class="subscription-preview">
+                <label for="subscribe">
+                  <h2 class="action">Подпишитесь на рассылку</h2>
+                  <p class="note">Только полезная информация и никакого спама, честное бойскаутское!</p>
+                </label>
+              </div>
+              <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
                 <input type="text" name="subscription" placeholder="Ваш e-mail" id="subscribe">
-                <button class="button" type="submit">Подписаться</button>
+                <button class="subscription button" type="submit">Подписаться</button>
               </form>
-            </section>
+          </section>
             <div class="contacts-container">
               <section class="social">
                 <h2 class="visually-hidden">Контакты</h2>
