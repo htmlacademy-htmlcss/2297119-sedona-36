@@ -89,7 +89,7 @@ button[type="submit"] {
 }
 
 .navigation-link {
-  padding: 0px 16px;
+  padding: 0 16px;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -458,8 +458,6 @@ input[type="text"] {
   padding: 8px 50px;
 }
 
-
-
 .contacts-container {
   display: flex;
   justify-content: space-between;
@@ -517,21 +515,29 @@ input[type="text"] {
 }
 
 .content {
-  margin: 35px 70px 70px 70px;
+  display: flex;
+  flex-direction: column;
+  padding: 35px 70px 70px 70px;
 }
 
 .catalog-title {
 font-weight: 700;
 font-size: 60px;
 line-height: 78px;
-padding-top: 35px;
-margin: 0;
+margin-top: 0;
+margin-bottom: 8px;
+}
+
+.catalog-header {
+  padding-top: 0;
+  padding-bottom: 40px ;
+  margin: 0;
 }
 
 .breadcrumbs {
   display: flex;
   list-style-type: none;
-  margin-top: 8px;
+  margin: 0;
   padding: 0;
 }
 
@@ -618,8 +624,8 @@ margin: 0;
   width: 1060px;
   display: flex;
   justify-content: space-between;
-  margin: 50px 70px 40px;
-  padding: 0;
+  padding: 50px 70px 40px;
+  margin: 0;
 }
 
 .catalog-header-container h2 {
@@ -678,7 +684,7 @@ margin: 0;
 
 .hotel {
   display: block;
-  grid-column: 1 / -1;
+  object-fit: scale-down;
 }
 
 .product-card-title {
