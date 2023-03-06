@@ -53,7 +53,6 @@ body {
 
 .button {
   font-family: "PT Sans", sans-serif;
-
   color: #FFFFFF;
   font-size: 20px;
   line-height: 36px;
@@ -64,18 +63,34 @@ body {
   border: 0;
   cursor: pointer;
   display: inline-block;
+  border-radius: 4px;
 }
 
-button[type="button"] {
+.link-button {
   background-color: #756157;
-  border: 0;
-  cursor: pointer;
 }
 
-button[type="submit"] {
+.link-button:hover,
+.link-button:focus {
+  background-color: #615048;
+}
+
+.link-button:active span,
+.submit-button:active span {
+  opacity: 30%;
+}
+
+.submit-button {
   background-color:#82B3D3;
-  border: 0;
-  cursor: pointer;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color:#68A2CA;
+}
+
+.button:disabled {
+  background-color: #E5E5E5;
 }
 
 .main-header {
@@ -171,11 +186,9 @@ button[type="submit"] {
   color: #FFFFFF;
   font-size: 16px;
   line-height: 20px;
-  background-color: #756157;
   padding: 8px 34px;
   list-style-type: none;
   border: 0;
-  margin-left: 20px;
 }
 
 .main-container {
@@ -257,16 +270,12 @@ button[type="submit"] {
   width: 230px;
 }
 
-.advantages-list-item h3 {
+/* .advantages-list-item h3 {
   margin: 0 27.5px 62px;
   padding: 0;
   width: 175px;
 }
-
-.advantages-list-item p {
-  margin: 0;
-  padding: 0;
-}
+*/
 
 .sedona-view {
   display: block;
@@ -309,6 +318,9 @@ button[type="submit"] {
 
 .advantages-list-item h3,
 .recomendations-list-item h3 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding: 0;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -319,6 +331,8 @@ button[type="submit"] {
 .recomendations-list p {
   font-size: 18px;
   line-height: 21px;
+  margin: 0;
+  padding: 0;
 }
 
 .recomendations-list {
@@ -334,10 +348,33 @@ button[type="submit"] {
 .recomendations-list-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 230px;
   padding: 81px 85px;
   margin: 0 auto;
+}
+
+.recomendations-list-item::before {
+  content: "";
+  min-width: 75px;
+  min-height: 72px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.house::before {
+  background-image: url("../images/apartments.svg");
+}
+
+.food::before {
+  background-image: url("../images/food.svg");
+}
+
+.souvenier::before {
+  background-image: url("../images/souveniers.svg");
+
 }
 
 .square,
@@ -367,6 +404,7 @@ button[type="submit"] {
  .invitation-advertisement {
   width: 505px;
   margin-bottom: 20px;
+  margin-top: 0;
  }
 
 
@@ -385,32 +423,28 @@ button[type="submit"] {
   margin: 0;
 }
 
-.hotels {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 54px;
-}
-
 .hotels-advertisement {
   margin: 0 0 20px;
   padding: 0;
 }
 
 .hotels-article {
-  width: 592px;
+  margin-bottom: 54px;
 }
 
 .hotels.button {
   display: block;
   padding: 8px 50px;
   margin: 0;
-  border: 0;
 }
 
-input ::placeholder {
+.page-footer {
+  padding: 0;
+  margin: 0;
+}
+
+.email::placeholder {
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
   opacity: 60%;
@@ -461,23 +495,23 @@ input ::placeholder {
 
 .subscription-form {
   display: flex;
-  width: 684px;
   justify-content: stretch;
 }
 
-.catalog .subscription-form input {
-  background-color: #F2F2F2;
-}
-
-input[type="text"] {
-  width: 452px;
-  padding: 0;
+.email {
+  box-sizing: border-box;
+  padding: 14px 20px;
+  width: 432px;
   margin: 0;
   border: none;
+  background-color: #F2F2F2;
+  border-radius: 4px 0 0 4px;
 }
+
 
 .subscription.button {
   padding: 8px 50px;
+  border-radius: 0 4px 4px 0;
 }
 
 .contacts-container {
@@ -485,8 +519,8 @@ input[type="text"] {
   justify-content: space-between;
   align-items: center;
   width: 1060px;
-  padding: 0;
-  margin: 40px 70px;
+  padding: 40px 70px;
+  margin: 0;
 }
 
 .social-list {
@@ -574,17 +608,23 @@ margin-bottom: 8px;
   margin: 0;
 }
 
+/* .breadcrumbs-item:not(:last-of-type)::after {
+  content: url("../images/icons/arrow.svg");
+  margin: 10.8px;
+} */
+
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-/* .breadcrumbs-item {
+.breadcrumbs-item {
   position: relative;
-} */
+}
 
 .breadcrumbs-link {
   color:#FFFFFF;
@@ -597,17 +637,25 @@ margin-bottom: 8px;
 }
 
 .breadcrumbs-link.home {
-  display: block;
   min-width: 12px;
   min-height: 12px;
   background-image: url(../images/icons/home-icon.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left center;
+  position: absolute;
   padding: 0;
   top: 0;
   bottom: 0;
   left: 0;
-  margin-right: 28px;
+  right: 0;
+}
+
+.catalog-filter-group {
+  border: none;
+}
+
+.radio-list, .checkbox-list {
+  list-style-type: none;
 }
 
 .general-filters-container {
@@ -670,13 +718,22 @@ margin-bottom: 8px;
   padding: 32px;
 }
 
-.button.apply {
-  background-color: #82B3D3;
+.filter-buttons .submit-button,
+.filter-buttons .reset-button {
+  min-width: 191px;
 }
 
-.button [type="reset"] {
-  border: none;
-  background: transparent;
+.filter-buttons .reset-button {
+  background-color: transparent;
+}
+
+.filter-buttons .reset-button:active span,
+.filter-buttons .reset-button:hover {
+  opacity: 30%;
+}
+
+.filter-buttons .reset-button:focus {
+  outline: #83B3D3 solid 3px;
 }
 
 .catalog-header-container {
@@ -813,17 +870,47 @@ margin-bottom: 8px;
   background-color: #7DB54F;
 }
 
+.favorite.added:hover,
+.favorite.added:focus {
+  background-color: #6C9E42;
+}
+
+.favorite.added:active span {
+  opacity: 30%;
+}
+
 .product-card .more {
   display: block;
   padding: 8px 0;
   margin: 0;
-  font-weight: 700;
   font-family: inherit;
   color:#FFFFFF;
   text-decoration: none;
   font-size: 16px;
   line-height: 20px;
-  background-color: #756157;
+}
+
+.stars {
+  background-image: url("../images/icons/star-icon.svg");
+  min-height: 17px;
+  background-position: left;
+  background-repeat: space no-repeat;
+}
+
+.product-card.amara .stars{
+  width: 89px;
+}
+
+.product-card.villas .stars{
+  width: 89px;
+}
+
+.product-card.desert .stars{
+  width: 66px;
+}
+
+.product-card.greentree .stars{
+  width: 42px;
 }
 
 .rating {
@@ -851,17 +938,19 @@ margin-bottom: 8px;
 }
 
 .pagination-link {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #ffffff;
   background-color: #82B3D3;
   text-decoration: none;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
-  display: block;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   box-sizing: border-box;
-  padding: 11.36px 24.55px 12.64px 23.45px ;
 }
 
 .pagination-current,
@@ -874,4 +963,12 @@ margin-bottom: 8px;
   background-image: none;
   background-color: inherit;
   color: #000000;
+}
+
+.main-subscription.catalog h2 {
+  color: #000000;
+}
+
+.main-subscription.catalog p {
+  color: #333333;
 }
