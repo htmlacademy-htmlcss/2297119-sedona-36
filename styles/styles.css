@@ -89,10 +89,6 @@ body {
   background-color:#68A2CA;
 }
 
-.button:disabled {
-  background-color: #E5E5E5;
-}
-
 .main-header {
   font-weight: 700;
   font-size: 20px;
@@ -112,6 +108,7 @@ body {
   color: #000000;
   text-decoration: none;
   text-align: center;
+  position: relative;
 }
 
 .pages-navigation {
@@ -162,6 +159,7 @@ body {
   min-height: 64px;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 
 .navigation-icon {
@@ -182,6 +180,27 @@ body {
   margin: 0;
 }
 
+.likes-number {
+  font-size: 10px;
+  line-height: 10px;
+  padding: 5px;
+  color: #FFFFFF;
+  background-color: #7DB54F;
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+  right: 2px;
+  z-index: 1;
+}
+
+.navigation-link-active::before {
+  content: "";
+  width: 68px;
+  height: 2px;
+  background-color: #756257;
+  position: absolute;
+  top: 46px;
+}
 
 .navigation-link.button {
   display: block;
@@ -205,7 +224,7 @@ body {
   background-color:#82B3D3;
   background: url("../images/hero-flag.png") no-repeat center bottom,
               url("../images/hero-background.jpg") no-repeat center;
-  background-size: 100% auto;
+  background-size: 100% auto, cover;
   padding-top: 51px;
   padding-bottom: 85px;
   border: 0;
@@ -627,7 +646,7 @@ body {
 
 .main-head {
   background-image: url(../images/filters.jpg);
-  background-size: 100% auto;
+  background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -952,7 +971,7 @@ margin-bottom: 8px;
 
 .favorite {
   display: block;
-  padding: 8px 0;
+  padding: 8px 5px;
   margin: 0;
   color:#FFFFFF;
   font-weight: 700;
@@ -978,7 +997,7 @@ margin-bottom: 8px;
 
 .product-card .more {
   display: block;
-  padding: 8px 0;
+  padding: 8px 5px;
   margin: 0;
   font-family: inherit;
   color:#FFFFFF;
@@ -1056,7 +1075,7 @@ margin-bottom: 8px;
   background-color: #68A2CA;
 }
 
-.pagination-link:active span {
+.pagination-link:not(.disabled):active span {
   opacity: 30%;
 }
 
