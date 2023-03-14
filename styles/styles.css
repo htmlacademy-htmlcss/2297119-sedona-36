@@ -662,6 +662,7 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
+  outline: none;
 }
 
 .logo:hover .developer-logo {
@@ -676,6 +677,7 @@ body {
 .logo:active .developer-logo {
   color: #756157;
   opacity: 30%;
+  outline: none;
 }
 
 .main-head {
