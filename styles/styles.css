@@ -112,6 +112,7 @@ body {
   text-decoration: none;
   text-align: center;
   position: relative;
+  cursor: pointer;
 }
 
 .pages-navigation {
@@ -131,6 +132,26 @@ body {
   padding: 0;
   margin-right: 30px;
   margin-left: 0;
+}
+
+.navigation-link:not(.disabled):hover {
+  opacity: 60%;
+}
+
+.navigation-link:not(.disabled):active {
+  opacity: 30%;
+}
+
+.navigation-link.disabled {
+  cursor: default;
+}
+
+.icons:hover {
+  opacity: 60%;
+}
+
+.icons:active {
+  opacity: 30%;
 }
 
 .navigation-list {
@@ -560,9 +581,27 @@ body {
   border: none;
   background-color: #F2F2F2;
   border-radius: 4px 0 0 4px;
-  font: inherit;
+  font-size: 24px;
+  line-height: 18px;
 }
 
+.email:hover,
+.email:focus {
+  background-color: #E6E6E6;
+}
+
+.email:active {
+  background-color: #83B3D3;
+}
+
+.email:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.email:disabled {
+  cursor: default;
+  outline: none;
+}
 
 .subscription.button {
   min-width: 232px;
@@ -575,14 +614,13 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 1060px;
-  padding: 40px 0 35px;
+  padding: 42px 0 35px;
   margin: 0 auto;
 }
 
 .social-list {
   list-style-type: none;
   display: flex;
-  width: 200px;
   justify-content: flex-start;
   padding: 0;
   margin: 0;
@@ -648,7 +686,7 @@ body {
 .logo {
   min-width: 115px;
   min-height: 33px;
-  margin-left: auto;
+  margin: 0;
   padding: 0;
   list-style-type: none;
   color: #000000;
@@ -689,7 +727,7 @@ body {
   background-color: #82B3D3;
   color: #FFFFFF;
   padding-top: 35px;
-  padding-bottom: 70px;
+  padding-bottom: 72px;
 }
 
 .content {
@@ -748,7 +786,7 @@ margin-bottom: 8px;
   position: absolute;
   top: 0;
   right: 0;
-  left: -17px;
+  left: -20px;
 }
 
 .breadcrumbs-item {
@@ -933,7 +971,7 @@ margin-bottom: 8px;
 
 .cost {
   box-sizing: border-box;
-  width: 142px;
+  width: 143px;
   height: 48px;
   padding: 12px 45px 12px 20px;
   font: inherit;
@@ -1100,7 +1138,7 @@ margin-bottom: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0 40px;
+  padding: 50px 0 39px;
   margin: 0 auto;
 }
 
@@ -1670,7 +1708,7 @@ margin-bottom: 8px;
 }
 
 .kids-visitors label {
-  padding-right: 83px;
+  padding-right: 10px;
 }
 
 .booking-form > .submit-button {
@@ -1701,13 +1739,13 @@ margin-bottom: 8px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
-  padding: 15px 18px 18px 22px;
+  padding: 20px 18px 20px 22px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   width: 256px;
   position: absolute;
   box-sizing: border-box;
-  right: -112px;
+  right: -114px;
   margin-top: 15px;
   display: none;
 }
@@ -1715,11 +1753,8 @@ margin-bottom: 8px;
 .tooltip {
   width: 26px;
   height: 26px;
-  position: absolute;
   margin: 0;
   padding: 0;
-  left: 59px;
-  bottom: 10px;
 }
 
 .tooltip-text::before {
@@ -1730,8 +1765,8 @@ margin-bottom: 8px;
   border-right: 10px solid transparent;
   border-bottom: 10px solid #333333;
   position: absolute;
-  top: -10px;
-  left: 120px;
+  top: -9px;
+  left: 118px;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
@@ -1740,5 +1775,7 @@ margin-bottom: 8px;
 }
 
 .kids-icon {
+  display: flex;
+  margin-right: 46px;
   position: relative;
 }
