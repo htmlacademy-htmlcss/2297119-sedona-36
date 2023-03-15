@@ -1549,7 +1549,7 @@ margin-bottom: 8px;
   position: absolute;
   font-size: 16px;
   line-height: 21px;
-  left: 137px;
+  left: 0px;
   top: 51px;
   padding: 0 20px 0;
 }
@@ -1777,5 +1777,9 @@ margin-bottom: 8px;
 .kids-icon {
   display: flex;
   margin-right: 46px;
+  position: relative;
+}
+
+.container {
   position: relative;
 }

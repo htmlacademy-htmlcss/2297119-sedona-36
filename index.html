@@ -182,13 +182,17 @@
           <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="field-group">
               <label for="arrival-date">Дата Заезда:</label>
-              <input class="modal-input arrival" type="text" id="arrival-date" name="start" placeholder="Укажите дату" value="27 апреля 2020">
-              <span class="comment error">Мы не можем отправить вас в прошлое.</span>
+              <div class="container">
+                <input class="modal-input arrival" type="text" id="arrival-date" name="start" placeholder="Укажите дату" value="27 апреля 2020">
+                <span class="comment error">Мы не можем отправить вас в прошлое.</span>
+              </div>
             </div>
             <div class="field-group">
               <label for="departure-date">Дата Выезда:</label>
-              <input class="modal-input departure" type="text" id="departure-date" name="start" placeholder="Укажите дату" value="1 сентября 2023">
-              <span class="comment">На эти даты есть свободные номера. Пока есть.</span>
+              <div class="container">
+                <input class="modal-input departure" type="text" id="departure-date" name="start" placeholder="Укажите дату" value="1 сентября 2023">
+                <span class="comment">На эти даты есть свободные номера. Пока есть.</span>
+              </div>
             </div>
             <div class="field-group visitors-number">
               <div class="visitors adult-visitors">
