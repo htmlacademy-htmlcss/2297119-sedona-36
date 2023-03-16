@@ -227,7 +227,7 @@ body {
   top: 44px;
 }
 
-.navigation-link.button {
+.link-button {
   display: block;
   margin-left: 20px;
   margin-right: 0;
@@ -238,6 +238,7 @@ body {
   padding: 8px 5px;
   min-width: 160px;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .main-container {
@@ -504,6 +505,8 @@ body {
   min-width: 376px;
   padding: 8px 5px;
   margin: 0;
+  font-size: 20px;
+  line-height: 36px;
 }
 
 .page-footer {
@@ -564,6 +567,7 @@ body {
 .main-subscription .note {
   font-size: 22px;
   line-height: 26px;
+  margin-top: 0;
   margin-bottom: 54px;
   padding: 0;
 }
@@ -585,17 +589,17 @@ body {
   line-height: 18px;
 }
 
-.email:hover,
-.email:focus {
+.email:hover {
   background-color: #E6E6E6;
-}
-
-.email:active {
-  background-color: #83B3D3;
 }
 
 .email:focus {
   outline: 3px solid #83B3D3;
+}
+
+.email:active {
+  background-color: #E6E6E6;
+  outline: 3px solid #000000;
 }
 
 .email:disabled {
@@ -822,6 +826,7 @@ margin-bottom: 8px;
 .control {
   position: relative;
   display: block;
+  cursor: pointer;
 }
 
 .control:hover {
@@ -900,6 +905,7 @@ margin-bottom: 8px;
   border-radius: 4px;
   appearance: none;
   outline: none;
+  cursor: pointer;
 }
 
 .select::before {
@@ -997,12 +1003,11 @@ margin-bottom: 8px;
 
 .cost:focus {
   background-color: #E6E6E6;
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
 }
 
 .cost:active {
-  background-color: #E6E6E6;
-  border: 3px solid #000000;
+  outline: 3px solid #000000;
 }
 
 .cost::-webkit-outer-spin-button,
@@ -1056,7 +1061,6 @@ margin-bottom: 8px;
 .radio-list-item:not(:last-child) {
   margin-bottom: 16px;
 }
-
 
 .range-scale {
   position: relative;
@@ -1298,6 +1302,7 @@ margin-bottom: 8px;
   text-decoration: none;
   font-size: 16px;
   line-height: 20px;
+  min-width: 140px;
 }
 
 .stars {
@@ -1565,6 +1570,7 @@ margin-bottom: 8px;
   text-align: center;
   box-sizing: border-box;
   border-radius: 4px;
+  -moz-appearance: textfield;
 }
 
 .adult-visitors {
