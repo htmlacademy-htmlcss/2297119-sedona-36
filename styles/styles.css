@@ -1124,7 +1124,7 @@ margin-bottom: 8px;
   margin-bottom: -4px;
 }
 
-.filter-buttons .reset-button:active span,
+.filter-buttons .reset-button:active,
 .filter-buttons .reset-button:hover {
   opacity: 30%;
 }
